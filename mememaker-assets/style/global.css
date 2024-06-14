@@ -42,7 +42,7 @@ body {
     text-decoration: none;
 }
 
-.navbar .nav__social .nav__social-link i {
+.navbar .nav__social a.nav__social-link {
     text-decoration: none;
 }
 
