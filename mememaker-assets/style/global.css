@@ -29,12 +29,6 @@ body {
     align-items: center;
 }
 
-.navbar {
-    a {
-        text-decoration: none;
-    }
-}
-
 .navbar .logo-text a:hover, .navbar .nav__social .nav__social-link i:hover {
     color: rgb(252, 191, 73);
 }
@@ -45,6 +39,11 @@ body {
 
 .navbar .logo-text a {
     color: rgb(254, 255, 254);
+    text-decoration: none;
+}
+
+.navbar .nav__social .nav__social-link i {
+    text-decoration: none;
 }
 
 h1 {
