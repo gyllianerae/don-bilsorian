@@ -279,7 +279,7 @@ randomBtn.onclick = () => {
 const downloadBtn = document.getElementById('download-btn');
 downloadBtn.onclick = () => {
     var link = document.createElement('a');
-    link.download = 'cock.png';
+    link.download = 'don.png';
     link.href = canvas.toDataURL()
     link.click();
 }
