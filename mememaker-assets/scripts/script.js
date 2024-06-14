@@ -187,12 +187,12 @@ AddParts(clothesList, 'clothes', 17, 'mememaker-assets/img/icons/clothes/017.png
 AddParts(clothesList, 'clothes', 18, 'mememaker-assets/img/icons/clothes/018.png', 'mememaker-assets/img/clothes/018.png');
 
 // AddParts(bgList, 'bg',1, 'mememaker-assets/img/icons/icon-bg1.png', 'mememaker-assets/img/background/bg1.png', true);
-AddParts(bgList, 'bg',2, 'mememaker-assets/img/icons/icon-bg2.png', 'mememaker-assets/img/background/bg2.png', true);
-AddParts(bgList, 'bg',3, 'mememaker-assets/img/icons/icon-bg3.png', 'mememaker-assets/img/background/bg3.png');
+AddParts(bgList, 'bg',0, 'mememaker-assets/img/icons/icon-bg2.png', 'mememaker-assets/img/background/bg2.png', true);
+AddParts(bgList, 'bg',1, 'mememaker-assets/img/icons/icon-bg3.png', 'mememaker-assets/img/background/bg3.png');
 // AddParts(bgList, 'bg',4, 'mememaker-assets/img/icons/icon-bg4.png', 'mememaker-assets/img/background/bg4.png');
-AddParts(bgList, 'bg',5, 'mememaker-assets/img/icons/icon-bg5.png', 'mememaker-assets/img/background/bg5.png');
+AddParts(bgList, 'bg',2, 'mememaker-assets/img/icons/icon-bg5.png', 'mememaker-assets/img/background/bg5.png');
 // AddParts(bgList, 'bg',6, 'mememaker-assets/img/icons/icon-bg6.png', 'mememaker-assets/img/background/bg6.png');
-AddParts(bgList, 'bg',7, 'mememaker-assets/img/icons/icon-bg7.png', 'mememaker-assets/img/background/bg7.png');
+AddParts(bgList, 'bg',3, 'mememaker-assets/img/icons/icon-bg7.png', 'mememaker-assets/img/background/bg7.png');
 // AddParts(bgList, 'bg',8, 'mememaker-assets/img/icons/icon-bg8.png', 'mememaker-assets/img/background/bg8.png');
 // AddParts(bgList, 'bg',9, 'mememaker-assets/img/icons/icon-bg9.png', 'mememaker-assets/img/background/bg9.png');
 // AddParts(bgList, 'bg',10, 'mememaker-assets/img/icons/icon-bg10.png', 'mememaker-assets/img/background/bg10.png');
@@ -254,8 +254,8 @@ function randRange(min, max) {
 const resetBtn = document.getElementById('reset-btn');
 resetBtn.onclick = () => {
     selectParts('head', 0);
-    selectParts('eyes', 0);
-    selectParts('mouth', 0);
+    selectParts('eyes', 1);
+    selectParts('mouth', 1);
     selectParts('bg', 0);
     selectParts('clothes', 0);
 }
@@ -266,7 +266,7 @@ randomBtn.onclick = () => {
     const randHead = randRange(0, 12);
     const randEyes = randRange(1, 8);
     const randMouth = randRange(1, 8);
-    const randBg = randRange(0, 7);
+    const randBg = randRange(0, 3);
     const randClothes = randRange(0, 18);
 
     selectParts('head', randHead);
