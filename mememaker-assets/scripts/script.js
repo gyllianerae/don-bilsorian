@@ -284,6 +284,72 @@ downloadBtn.onclick = () => {
     link.click();
 }
 
+// Define object to store maxTranslateX values for each type
+const maxTranslateXValues = {
+    head: {
+        small: -970,
+        medium: -730,
+        large: -670
+    },
+    eyes: {
+        small: -520,
+        medium: -280,
+        large: -220
+    },
+    mouth: {
+        small: -520,
+        medium: -280,
+        large: -220
+    },
+    clothes: {
+        small: -1510,
+        medium: -1280,
+        large: -1210
+    },
+    bg: {
+        small: -2000,
+        medium: -1500,
+        large: -1300
+    }
+};
+
+// Function to calculate maxTranslateX value based on the device width and media query conditions
+function calculateMaxTranslateX(type) {
+    const screenWidth = window.innerWidth;
+    let maxTranslateX;
+
+    if (screenWidth <= 600) {
+        maxTranslateX = maxTranslateXValues[type].small;
+    } else if (screenWidth <= 828) {
+        maxTranslateX = maxTranslateXValues[type].medium;
+    } else {
+        maxTranslateX = maxTranslateXValues[type].large;
+    }
+
+    return maxTranslateX;
+}
+
+// Function to update maxTranslateX values for right buttons based on screen size
+function updateMaxTranslateX() {
+    // Update maxTranslateX values for head list
+    headRightmaxTranslateX = calculateMaxTranslateX('head');
+    // Update maxTranslateX values for eyes list
+    eyesRightmaxTranslateX = calculateMaxTranslateX('eyes');
+    // Update maxTranslateX values for mouth list
+    mouthRightmaxTranslateX = calculateMaxTranslateX('mouth');
+    // Update maxTranslateX values for clothes list
+    clothesRightmaxTranslateX = calculateMaxTranslateX('clothes');
+    // Update maxTranslateX values for bg list
+    bgRightmaxTranslateX = calculateMaxTranslateX('bg');
+}
+
+// Call updateMaxTranslateX function on page load
+updateMaxTranslateX();
+
+// Call updateMaxTranslateX function when the window resizes
+window.addEventListener('resize', updateMaxTranslateX);
+
+
 //head left and right buttons
 const headLeftBtn = document.getElementById('head-left');
 const headLeftmaxTranslateX = 0; // Adjust the maximum translation as needed
@@ -299,7 +365,7 @@ headLeftBtn.onclick = () => {
 }
 
 const headRightBtn = document.getElementById('head-right');
-const headRightmaxTranslateX = -670; // Adjust the maximum translation as needed
+// const headRightmaxTranslateX = -670; 
 const headRighttranslateStep = 200; // Adjust the step size as needed
 
 headRightBtn.onclick = () => {
@@ -326,7 +392,7 @@ eyesLeftBtn.onclick = () => {
 }
 
 const eyesRightBtn = document.getElementById('eyes-right');
-const eyesRightmaxTranslateX = -220; // Adjust the maximum translation as needed
+// const eyesRightmaxTranslateX = -220;
 const eyesRighttranslateStep = 200; // Adjust the step size as needed
 
 eyesRightBtn.onclick = () => {
@@ -355,7 +421,7 @@ mouthLeftBtn.onclick = () => {
 }
 
 const mouthRightBtn = document.getElementById('mouth-right');
-const mouthRightmaxTranslateX = -220; // Adjust the maximum translation as needed
+// const mouthRightmaxTranslateX = -220;
 const mouthRighttranslateStep = 200; // Adjust the step size as needed
 
 mouthRightBtn.onclick = () => {
@@ -383,7 +449,7 @@ clothesLeftBtn.onclick = () => {
 }
 
 const clothesRightBtn = document.getElementById('clothes-right');
-const clothesRightmaxTranslateX = -1210; // Adjust the maximum translation as needed
+// const clothesRightmaxTranslateX = -1210;
 const clothesRighttranslateStep = 200; // Adjust the step size as needed
 
 clothesRightBtn.onclick = () => {
@@ -411,7 +477,7 @@ bgLeftBtn.onclick = () => {
 }
 
 const bgRightBtn = document.getElementById('bg-right');
-const bgRightmaxTranslateX = -1300; // Adjust the maximum translation as needed
+// const bgRightmaxTranslateX = -1300;
 const bgRighttranslateStep = 200; // Adjust the step size as needed
 
 bgRightBtn.onclick = () => {

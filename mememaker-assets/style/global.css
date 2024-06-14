@@ -288,7 +288,52 @@ h1 {
     transform: scale(1.0);
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        font-size: 1.8rem;
+        margin: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+        margin: 2rem 4rem;
+    }
+
+    .main-view, .left-view {
+        flex-direction: column;
+        gap: 20px; /* Add gap between elements for better spacing */
+    }
+
+    #mainCanvas {
+        width: 80%; /* Make canvas fill the width of its container */
+        height: auto;
+        margin: auto; /* Allow canvas height to adjust proportionally */
+    }
+
+    .light-button, .dark-button {
+        width: 80%;
+        margin: auto; /* Make buttons fill the width of their container */
+        font-size: 1.5rem;
+    }
+
+    .main-view .border-bar {
+        display: none; /* Hide border bar on smaller screens */
+    }
+
+    .right-view {
+        margin: auto;
+        width: 80%;
+    }
+
+    .dir-button {
+        width: 10%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 990px) {
     .navbar {
         display: flex;
         flex-direction: row;
@@ -329,6 +374,58 @@ h1 {
 
     .dir-button {
         width: 10%;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 5rem; /* Adjust font size for smaller screens */
+        margin: 2rem 5rem;
+    }
+
+    .main-view, .left-view {
+        flex-direction: column;
+        gap: 20px; /* Add gap between elements for better spacing */
+    }
+
+    #mainCanvas {
+        width: 80%; /* Make canvas fill the width of its container */
+        height: auto;
+        margin: auto; /* Allow canvas height to adjust proportionally */
+    }
+
+    .light-button, .dark-button {
+        width: 80%;
+        margin: auto; /* Make buttons fill the width of their container */
+        font-size: 2rem;
+    }
+
+    .main-view .border-bar {
+        display: none; /* Hide border bar on smaller screens */
+    }
+
+    .right-view {
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dir-button {
+        width: 10%;
+    }
+
+    .selector, .section-header {
+        width: 80%;
     }
 }
 
